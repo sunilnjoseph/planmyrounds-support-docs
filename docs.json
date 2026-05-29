@@ -62,8 +62,8 @@
     ]
   },
   "logo": {
-    "light": "/images/pmr.svg",
-    "dark": "/images/pmr.svg"
+    "light": "/images/pmr_logo.svg",
+    "dark": "/images/pmr_logo.svg"
   },
   "navbar": {
     "links": [
@@ -98,7 +98,7 @@
   "description": "PlanMyRounds is physician scheduling software for hospitalist groups — automate fair shift rosters, manage leaves, swaps, and on-call rotations without spreadsheets.",
   "background": {
     "color": {
-      "light": "#F7F6FF",
+      "light": "#FFFFFF",
       "dark": "#0D0F1C"
     }
   },
