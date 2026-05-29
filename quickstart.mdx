@@ -3,67 +3,85 @@ title: "Quickstart: build your first roster"
 description: "Set up your PlanMyRounds organisation, add staff and shift templates, then build and publish your first clinical roster in a few guided steps."
 ---
 
-This guide takes you from a fresh PlanMyRounds account to your first published roster. Plan on about **10 minutes**.
+This guide takes you from a fresh PlanMyRounds account to your first **published duty plan**. Plan on about **10 minutes**.
 
 ## Prerequisites
 
 - A PlanMyRounds account ([sign up](https://planmyrounds.com/))
-- Admin access to your organisation
-- A list of staff (names \+ email addresses) you want to roster
-- A rough idea of your shift pattern (e.g. _Day SHO 08:00–20:00, Night Reg 20:00–08:00_)
+- **Admin** access to your organisation (only admins can create shifts and rosters)
+- Your team of doctors added under **Users**
+- An idea of the shift pattern you run (e.g. _Morning OPD 08:00–17:00, Night Cover 20:00–08:00_)
 
 ## Steps
 
 <Steps>
-  <Step title="Set up your organisation">
-    From the dashboard, go to **Organisation Settings** and confirm:
+  <Step title="Add your team">
+    Go to **Users** in the sidebar and invite the doctors who will be on duty. For each user set:
 
-    - Organisation name and time zone
-    - Working week (Mon–Sun) and default working hours
-    - Minimum rest hours between shifts
-  </Step>
-  <Step title="Invite your staff">
-    Go to **User Management → Invite users** and add staff by email. Assign each one a **role** (e.g. SHO, Registrar, Consultant) — roles control which shifts they're eligible for.
+    - **Role** — admin or doctor
+    - **Seniority** — senior or junior (used by the scheduler for senior-to-junior ratios)
+    - **Department / pod** (optional) — makes team selection faster later
 
     <Tip>
-      Bulk-invite via CSV if you have more than 10 users.
+      Add a few extra doctors as a buffer. It gives the engine room to balance workload fairly and absorb absences.
     </Tip>
   </Step>
-  <Step title="Create your shift templates">
-    Go to **Organisation Settings → Shift templates** and add the shifts your team runs regularly.
+  <Step title="Create your custom shifts">
+    Go to **Shifts** in the sidebar. PlanMyRounds ships with default shifts, but you'll usually want a few custom ones tailored to your department.
 
-    For each template, set:
+    Select **Create New Shift** and fill in:
 
-    - Code and name (e.g. `D-SHO`, _Day SHO_)
-    - Start and end times
-    - Required role
-    - Location and break
+    - **Shift Name** — e.g. _Morning OPD_, _Night ICU Cover_
+    - **Start Time** and **End Time** (overnight shifts that cross midnight are handled automatically)
+    - **Required Doctors** — minimum headcount per day
+    - **Minimum Seniors Required** — seniority floor for the shift
 
-    See [Shift templates](/shifts/shift-templates) for full details.
+    See [Creating shifts](/shifts/creating-shifts) for recovery-time overrides and other options.
   </Step>
-  <Step title="Build your first roster">
-    Go to **Rosters → New roster**. Pick a date range (start with one week) and the team it covers.
+  <Step title="Approve any leave for the period">
+    The scheduling engine only respects leave that is **Approved** before generation starts. Pending requests are ignored.
 
-    In the roster grid, drag templates from the right-hand panel onto the person/date cells. Use **Auto-assign** to fill multiple shifts at once.
+    Go to **Leave** and approve (or reject) any outstanding requests covering your roster dates. See [Approval workflow](/leave/approval-workflow).
+  </Step>
+  <Step title="Open the duty plan wizard">
+    Go to **Duty Plans** in the sidebar and select **Create New Plan**. The wizard walks you through four steps:
 
-    See [Creating shifts](/shifts/creating-shifts) and [Assigning staff](/shifts/assigning-staff).
+    1. **Period and details** — pick a Start Date and End Date (use the **Next Week** / **Next Month** quick buttons), and optionally name the plan (e.g. _Cardiology — June 2026_).
+    2. **Shift configuration** — choose which shifts to include and how many doctors each one needs per day. Apply one pattern to every day, or use different patterns for weekends / specific weekdays.
+    3. **Team selection** — pick the doctors for this plan. Filter by department or pod. A live **coverage check** warns you if you don't have enough doctors for the period.
+    4. **Scheduling rules** — set max consecutive work days, minimum rest days per week, minimum rest hours between shifts, senior-to-junior ratios, and other constraints.
+
+    See [Creating a roster](/rosters/creating-a-roster) for full details on each step.
+  </Step>
+  <Step title="Generate">
+    Select **Generate**. The engine runs in the background and usually produces a **Draft** roster within a minute. You're taken straight to the roster detail page.
+
+    If generation **Fails**, it's usually not enough doctors, rules that are too tight, or too much approved leave in the period. Adjust inputs and retry.
   </Step>
   <Step title="Review and publish">
-    Click **Review** to check for unassigned shifts, conflicts, and rest-rule breaches. Resolve issues, then click **Publish**.
+    Check coverage, workload distribution, and any flagged conflicts on the draft. When you're happy, select **Publish**.
 
-    Staff are notified by email and in-app. See [Publishing and notifications](/shifts/publishing-and-notifications).
+    The roster goes live, becomes visible to the whole team, and a shareable link is available. See [Publishing a roster](/rosters/publishing-a-roster).
   </Step>
 </Steps>
 
 ## What's next
 
 <CardGroup cols={2}>
-  <Card title="Handle swaps and cover" icon="arrows-rotate" href="/shifts/swaps-and-cover">
-    Let staff trade shifts after publication.
+  <Card title="Handle swaps and cover" icon="arrows-rotate" href="/swaps/overview">
+    Let doctors trade duties after the roster is published.
   </Card>
 
-  <Card title="Shifts overview" icon="circle-info" href="/shifts/overview">
-    Deep-dive into the shifts module.
+  <Card title="Edit a published roster" icon="pen-to-square" href="/rosters/editing-a-published-roster">
+    Make manual adjustments when real-world changes happen.
+  </Card>
+
+  <Card title="Understand the rules" icon="shield-halved" href="/rosters/roster-constraints">
+    Learn how work, rest, and fairness constraints shape the schedule.
+  </Card>
+
+  <Card title="How shifts work" icon="circle-info" href="/shifts/overview">
+    Default vs custom shifts, recovery times, and the shift library.
   </Card>
 </CardGroup>
 
