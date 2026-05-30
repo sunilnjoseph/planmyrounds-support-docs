@@ -14,7 +14,7 @@
   "navigation": {
     "pages": [
       "index",
-      "docs/quickstart",
+      "quickstart",
       {
         "group": "Rosters",
         "icon": "calendar-check",
