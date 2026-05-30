@@ -1,0 +1,105 @@
+---
+title: "Updating a doctor's profile and preferences"
+sidebarTitle: "Doctor profiles"
+description: "Keep doctor profiles current so the scheduling engine has accurate departments, seniority, hour limits, and shift preferences to work with."
+icon: "id-card"
+---
+
+A doctor profile holds everything the [scheduling engine](/scheduling-engine) needs to know to build a fair, valid roster. Keeping profiles up to date is the single most important thing you can do for clean roster output.
+
+<Note>
+  Only admins can edit doctor profiles.
+</Note>
+
+## What you can configure
+
+| Field | What it does |
+| --- | --- |
+| **Name** | The display name used on rosters and calendars. |
+| **Department** | Used for filtering when building rosters. |
+| **Level** | _Senior_ or _Junior_. Drives role-based shift requirements and is shown with an asterisk (`*`) on calendars for seniors. |
+| **Date of joining** | Used to apply onboarding rules during the new doctor protection period (if configured). |
+| **Pod** | Optional sub-grouping within a department — useful for organising large teams. |
+| **Email** | Used for swap notifications and leave confirmation emails. Only editable on profiles that aren't linked to a member account. |
+| **Phone** | Optional contact number. |
+| **Min and max hours per month** | The lowest and highest number of duty hours the engine will assign to this doctor in a given month. |
+| **Excluded shift types** | Shift types this doctor should never be assigned to, regardless of the period. |
+| **Status** | _Active_ or _Inactive_. Inactive doctors are excluded from new rosters. |
+
+<Tip>
+  Excluded shift types are useful for permanent constraints — for example, a doctor who can never take night shifts. For one-off preferences, use [Shifts to Avoid](/leave/applying-for-leave#mark-shifts-to-avoid) on a leave entry instead.
+</Tip>
+
+## Edit a doctor's profile
+
+<Steps>
+  <Step title="Open Doctors">
+    Go to **Doctors** in the sidebar.
+  </Step>
+  <Step title="Open the profile">
+    Find the doctor and open their profile.
+  </Step>
+  <Step title="Edit">
+    Select **Edit** (the pencil icon).
+  </Step>
+  <Step title="Save">
+    Make your changes and select **Save**. Changes take effect on the next roster you generate.
+  </Step>
+</Steps>
+
+<Note>
+  If the profile is linked to a member account, the **email** field is managed by that member's account and can't be changed from the doctor profile.
+</Note>
+
+## Submit leave or preferences on a doctor's behalf
+
+From a doctor's profile page you can also:
+
+- [Submit a leave request](/leave/applying-for-leave#submit-a-request-as-an-admin) for them.
+- Add [shifts to avoid](/leave/applying-for-leave#mark-shifts-to-avoid) as soft preferences.
+- Review their leave history.
+
+This is the usual flow for doctors who don't have a linked PlanMyRounds account — the admin manages everything for them.
+
+## Link a doctor to a member account
+
+If a doctor has a PlanMyRounds account, link it to their doctor profile. Once linked, they can sign in to see their own shifts, submit leave from **My Leaves**, and start [duty swaps](/swaps/requesting-a-swap).
+
+<Steps>
+  <Step title="Open the profile">
+    Go to **Doctors** and open the doctor.
+  </Step>
+  <Step title="Start the link">
+    Select **Link Account** from the action menu.
+  </Step>
+  <Step title="Find the member">
+    Search by name or email.
+  </Step>
+  <Step title="Confirm">
+    Confirm the link. The doctor can sign in straight away.
+  </Step>
+</Steps>
+
+<Note>
+  The doctor needs to be a [member of your organisation](/team/inviting-a-member) first. Invite them by email if they aren't yet.
+</Note>
+
+## Active vs. inactive
+
+Use **Inactive** to take a doctor out of new roster generation without losing their history:
+
+- They stay on past rosters and their leave history is preserved.
+- They won't appear in the doctor pool when you build a new roster.
+- Setting their linked member account to **Deactivated** automatically marks the doctor profile as Inactive too. See [Deactivating or removing a member](/team/removing-a-user).
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="How the scheduler uses these fields" icon="microchip" href="/scheduling-engine#doctor-parameters">
+    Deep dive into every doctor parameter the engine reads.
+  </Card>
+
+  <Card title="Create a roster" icon="wand-magic-sparkles" href="/rosters/creating-a-roster">
+    Put updated profiles to work in your next duty plan.
+  </Card>
+</CardGroup>

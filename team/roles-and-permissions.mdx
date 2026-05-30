@@ -1,0 +1,96 @@
+---
+title: "Roles and permissions"
+description: "What admins and members can and can't do in PlanMyRounds — and how to change someone's role."
+icon: "shield-halved"
+---
+
+PlanMyRounds uses two roles: **Admin** and **Member**. Every person in your organisation has exactly one of them. This page is a quick reference for what each role can do and how to switch between them.
+
+## What admins can do
+
+Admins have full access to everything in your organisation. An admin can:
+
+- Create, edit, publish, and archive [duty rosters](/rosters/overview).
+- Manage [shift templates](/shifts/overview) — create, edit, and deactivate.
+- Add, edit, deactivate, and remove [doctor profiles](/team/doctor-profiles).
+- Submit, approve, and reject [leave requests](/leave/overview) on behalf of any doctor.
+- Create and manage [leave types](/leave/leave-types).
+- Invite new members and admins to the organisation.
+- Deactivate or remove other members (but not themselves).
+- Access organisation settings.
+
+## What members can do
+
+Members have a read-oriented view of the organisation. A member can:
+
+- View all published rosters and the team calendar.
+- View leave types (read only).
+- Submit [leave requests](/leave/applying-for-leave) for themselves — if linked to a doctor profile.
+- View their own leave history and current status.
+- Request [duty swaps](/swaps/requesting-a-swap) on published rosters.
+
+Members **cannot** create rosters, approve leave, manage other users, or change organisation settings.
+
+## Permissions at a glance
+
+| Action | Admin | Member |
+| --- | :-: | :-: |
+| View published rosters | ✓ | ✓ |
+| Create or edit rosters | ✓ | — |
+| Publish or archive rosters | ✓ | — |
+| Manage shift templates | ✓ | — |
+| Manage doctor profiles | ✓ | — |
+| Submit own leave | ✓ | ✓ (if linked) |
+| Submit leave for others | ✓ | — |
+| Approve or reject leave | ✓ | — |
+| Manage leave types | ✓ | — |
+| Request a swap | ✓ | ✓ (if linked) |
+| Invite or remove members | ✓ | — |
+| Change roles | ✓ | — |
+| Access organisation settings | ✓ | — |
+
+## Change a member's role
+
+Admins can update any other member's role at any time.
+
+<Steps>
+  <Step title="Open Members">
+    Go to **Settings › Members**.
+  </Step>
+  <Step title="Find the person">
+    Locate them in the members list.
+  </Step>
+  <Step title="Edit">
+    Select the edit (pencil) icon next to their name.
+  </Step>
+  <Step title="Switch the role">
+    Change the role to **Admin** or **Member** and save.
+  </Step>
+</Steps>
+
+<Warning>
+  Granting someone the **Admin** role gives them full control of your organisation, including the ability to manage other members. Only grant admin access to people you trust.
+</Warning>
+
+## Doctor profiles vs. member accounts
+
+A **member account** is what a person uses to log in. A **doctor profile** is the scheduling record used when generating rosters. The two can be linked, which is what lets a signed-in doctor see their own shifts, submit their own leave, and request swaps.
+
+Linking is **optional**:
+
+- You can have doctor profiles for people who don't have PlanMyRounds accounts — the admin manages everything for them.
+- You can have member accounts that aren't linked to any doctor — useful for scheduling-only admins.
+
+See [Updating a doctor's profile](/team/doctor-profiles#link-a-doctor-to-a-member-account) for how to link the two.
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Invite a team member" icon="user-plus" href="/team/inviting-a-member">
+    Add someone new with the right role from day one.
+  </Card>
+
+  <Card title="Deactivate or remove a member" icon="user-minus" href="/team/removing-a-user">
+    Revoke access while preserving history.
+  </Card>
+</CardGroup>

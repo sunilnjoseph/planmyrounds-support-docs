@@ -47,6 +47,17 @@
         ]
       },
       {
+        "group": "Team",
+        "icon": "user-group",
+        "pages": [
+          "team/overview",
+          "team/roles-and-permissions",
+          "team/inviting-a-member",
+          "team/doctor-profiles",
+          "team/removing-a-user"
+        ]
+      },
+      {
         "group": "Leave",
         "icon": "plane-departure",
         "pages": [

@@ -1,0 +1,93 @@
+---
+title: "Deactivating or removing a member"
+sidebarTitle: "Deactivate or remove"
+description: "Revoke a team member's access to your PlanMyRounds organisation — reversibly, or permanently. When to deactivate, when to remove, and how to restore access."
+icon: "user-minus"
+---
+
+When someone leaves the team, you have two options for removing their access. The right choice depends on whether you might need to restore them later.
+
+## Deactivate vs. remove
+
+| Action | What it does |
+| --- | --- |
+| **Deactivate** | Blocks the member from accessing the organisation. Their account and all historical data are preserved. Any linked doctor profile is set to **Inactive**. **Reversible.** |
+| **Remove (delete)** | Soft-deletes the member — they're hidden from the UI. Historical data (rosters, leave records) is still preserved for audit purposes. **Not easily reversible.** |
+
+<Tip>
+  **Deactivate is the right choice in most cases.** It's reversible, and it keeps past rosters showing the correct doctor assignments. Only use **Remove** when you're certain you won't need to bring them back.
+</Tip>
+
+## Deactivate a member
+
+<Steps>
+  <Step title="Open Members">
+    Go to **Settings › Members**.
+  </Step>
+  <Step title="Find the member">
+    Locate them in the members table.
+  </Step>
+  <Step title="Open the action menu">
+    Select the three-dot menu next to their name.
+  </Step>
+  <Step title="Deactivate">
+    Select **Deactivate Member** and confirm.
+  </Step>
+</Steps>
+
+The member's status changes to **Deactivated**. They can no longer log in or access any data, and their linked [doctor profile](/team/doctor-profiles) (if any) is automatically set to **Inactive** — so they're excluded from future roster generation.
+
+<Warning>
+  You cannot deactivate **your own** account. If you need to remove your own admin access, another admin has to do it on your behalf. If you're the only admin, contact support.
+</Warning>
+
+## Reactivate a deactivated member
+
+If you need to bring someone back:
+
+<Steps>
+  <Step title="Find them in Members">
+    Locate the deactivated member in the Members list.
+  </Step>
+  <Step title="Reactivate">
+    Select **Reactivate** from the action menu.
+  </Step>
+</Steps>
+
+Their account is restored and their doctor profile is set back to **Active**. They can sign in straight away.
+
+## Remove a member permanently
+
+<Steps>
+  <Step title="Open Members">
+    Go to **Settings › Members**.
+  </Step>
+  <Step title="Find the member">
+    Locate them in the table.
+  </Step>
+  <Step title="Remove">
+    Select **Remove** from the three-dot action menu and confirm.
+  </Step>
+</Steps>
+
+<Warning>
+  Removal is a **soft delete**. Historical records are preserved, but the member no longer appears in the UI — and this can't be undone from the settings page. Use **Deactivate** instead if there's any chance you'll need to restore access later.
+</Warning>
+
+## What happens to past rosters?
+
+Past rosters — generated, published, or archived — always show the doctor assignments they were built with. Deactivating or removing a member **does not** change historical rosters.
+
+This is why deactivation is preferred for clinicians who have actually worked shifts: their name stays correctly tied to the work they did.
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Invite a team member" icon="user-plus" href="/team/inviting-a-member">
+    Bring a replacement on board.
+  </Card>
+
+  <Card title="Roles and permissions" icon="shield-halved" href="/team/roles-and-permissions">
+    Adjust someone's access without removing them.
+  </Card>
+</CardGroup>
