@@ -12,9 +12,14 @@
     "dark": "/images/favicon.svg"
   },
   "navigation": {
-    "pages": [
-      "index",
-      "quickstart",
+    "groups": [
+      {
+        "group": "Getting Started",
+        "pages": [
+          "index",
+          "quickstart"
+        ]
+      },
       {
         "group": "Rosters",
         "icon": "calendar-check",
@@ -71,7 +76,13 @@
           "leave/calendar"
         ]
       },
-      "scheduling-engine"
+      {
+        "group": "Reference",
+        "icon": "microchip",
+        "pages": [
+          "scheduling-engine"
+        ]
+      }
     ]
   },
   "logo": {
