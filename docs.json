@@ -28,8 +28,20 @@
           "rosters/creating-a-roster",
           "rosters/publishing-a-roster",
           "rosters/editing-a-published-roster",
+          "rosters/duty-calendar",
+          "rosters/duty-dashboard",
           "rosters/roster-constraints",
+          "rosters/retrying-a-failed-roster",
           "rosters/statuses"
+        ]
+      },
+      {
+        "group": "Auto Duty Planning",
+        "icon": "robot",
+        "pages": [
+          "auto-duty-planning/overview",
+          "auto-duty-planning/setting-up-an-auto-duty",
+          "auto-duty-planning/running-a-planning-cycle"
         ]
       },
       {
@@ -38,7 +50,8 @@
         "pages": [
           "shifts/overview",
           "shifts/viewing-shifts",
-          "shifts/creating-shifts"
+          "shifts/creating-shifts",
+          "shifts/shift-schedules"
         ]
       },
       {
@@ -61,6 +74,7 @@
           "team/inviting-a-member",
           "team/link-or-unlink-accounts",
           "team/doctor-profiles",
+          "team/locations",
           "team/removing-a-user"
         ]
       },
@@ -150,6 +164,11 @@
     {
       "source": "/shifts/shift-templates",
       "destination": "/shifts/viewing-shifts",
+      "permanent": true
+    },
+    {
+      "source": "/shifts/shift-configs",
+      "destination": "/shifts/shift-schedules",
       "permanent": true
     }
   ],

@@ -6,6 +6,10 @@ icon: "circle-info"
 
 A **shift** in PlanMyRounds is a named time block that defines when doctors are on duty — for example, _Morning OPD_, _Night ICU Cover_, or _Weekend On-call_. Shifts are the building blocks of every [roster](/rosters/overview): when you create one, you choose which shifts to include and the scheduler assigns doctors to cover them.
 
+<Note>
+  This page covers individual shift templates, listed under **Shift Requirements** in the sidebar. To combine several shifts into a reusable weekly pattern you can reuse across rosters and Auto Duty, see [Shift Schedules](/shifts/shift-schedules).
+</Note>
+
 ## What a shift template defines
 
 Each shift template captures everything the scheduler needs to know:
@@ -20,9 +24,9 @@ Each shift template captures everything the scheduler needs to know:
 
 ## Default vs. custom shifts
 
-PlanMyRounds ships with a set of **default** shifts that cover common hospital patterns. These can't be edited \\u2014 they're there to get you started quickly.
+PlanMyRounds ships with a set of **default** shifts that cover common hospital patterns. These can't be edited — they're there to get you started quickly.
 
-You can also create as many **custom** shifts as you need, tailored to your department's schedule. Custom shifts are scoped to your organisation \\u2014 other teams can't see or use them.
+You can also create as many **custom** shifts as you need, tailored to your department's schedule. Custom shifts are scoped to your organisation — other teams can't see or use them.
 
 <CardGroup cols={2}>
   <Card title="Default shifts" icon="lock">
@@ -39,18 +43,18 @@ You can also create as many **custom** shifts as you need, tailored to your depa
 When you view a [published roster](/rosters/publishing-a-roster), each shift is shown in a distinct colour on the calendar. The colour palette cycles through four colours based on the order shifts were configured, so you can tell them apart at a glance.
 
 <Tip>
-  Senior doctors are marked with an asterisk (`*`) next to their name on the calendar \\u2014 a quick way to confirm the senior-to-junior ratio on any given day.
+  Senior doctors are marked with an asterisk (`*`) next to their name on the calendar — a quick way to confirm the senior-to-junior ratio on any given day.
 </Tip>
 
 ## Who can manage shifts?
 
 | Action | Doctor | Admin |
 | --- | :-: | :-: |
-| View shifts on the calendar | \\u2713 | \\u2713 |
-| Browse the shift library | \\u2713 | \\u2713 |
-| Create a custom shift | \\u2014 | \\u2713 |
-| Edit a custom shift | \\u2014 | \\u2713 |
-| Edit a default shift | \\u2014 | \\u2014 |
+| View shifts on the calendar | ✓ | ✓ |
+| Browse the shift library | ✓ | ✓ |
+| Create a custom shift | — | ✓ |
+| Edit a custom shift | — | ✓ |
+| Edit a default shift | — | — |
 
 ## Next steps
 
@@ -61,5 +65,13 @@ When you view a [published roster](/rosters/publishing-a-roster), each shift is 
 
   <Card title="Create a shift" icon="plus" href="/shifts/creating-shifts">
     Build a custom shift template for your team.
+  </Card>
+
+  <Card title="Build a Shift Schedule" icon="layer-group" href="/shifts/shift-schedules">
+    Combine shifts into a reusable weekly pattern for rosters and Auto Duty.
+  </Card>
+
+  <Card title="Set up an Auto Duty" icon="robot" href="/auto-duty-planning/overview">
+    Use a Shift Schedule to generate duty plans on a repeating schedule.
   </Card>
 </CardGroup>

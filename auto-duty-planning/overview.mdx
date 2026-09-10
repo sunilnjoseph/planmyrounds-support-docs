@@ -1,0 +1,93 @@
+---
+title: "How Auto Duty Planning works"
+description: "Understand Auto Duty — a recurring, self-driving duty plan that notifies your team, collects availability and leave, and generates a roster on a repeating schedule."
+icon: "circle-info"
+---
+
+An **Auto Duty** is a recurring definition that plans your roster for you, cycle after cycle — weekly or monthly — without you rebuilding it by hand each time. Set it up once, and PlanMyRounds notifies your team, opens a window for availability and leave, generates the schedule, and (if you choose) publishes it, all on its own.
+
+<Note>
+  Auto Duty is a separate, additional way to get a roster — it doesn't replace the [manual Duty Plan wizard](/rosters/creating-a-roster). Every cycle it runs still produces an ordinary **Duty Plan**, generated into the same rosters you'd otherwise build by hand.
+</Note>
+
+## Auto Duty, Planning Cycle, Duty Plan — what's what
+
+<CardGroup cols={2}>
+  <Card title="Auto Duty" icon="robot">
+    The recurring setup: which team, which Shift Schedule, what cadence, and how much of the process runs unattended. Created once, reused every cycle.
+  </Card>
+
+  <Card title="Planning Cycle" icon="route">
+    One run of that setup for one period — for example, the cycle that plans next week. Moves through five stages from Notify to Published.
+  </Card>
+
+  <Card title="Duty Plan" icon="calendar-check">
+    The roster a cycle produces. Once generated, it's the same kind of Duty Plan you'd get from the manual wizard — reviewable, publishable, editable.
+  </Card>
+</CardGroup>
+
+## What an Auto Duty covers
+
+<CardGroup cols={2}>
+  <Card title="Cadence" icon="calendar-range">
+    Weekly or monthly, with a start day and how far ahead planning opens.
+  </Card>
+
+  <Card title="A Shift Schedule" icon="layer-group">
+    The [weekly shift pattern](/shifts/shift-schedules) generated against every cycle.
+  </Card>
+
+  <Card title="A doctor pool" icon="user-group">
+    Scoped by department, pod, and location — re-queried fresh every cycle, so staff changes are picked up automatically.
+  </Card>
+
+  <Card title="Scheduling rules" icon="shield-halved">
+    The same work, rest, and fairness rules used by the manual roster wizard.
+  </Card>
+</CardGroup>
+
+## The 5-stage planning cycle
+
+Every cycle moves through the same stages, shown as a stepper on the cycle page:
+
+| Stage | What happens |
+| --- | --- |
+| **Notify** | The team gets a heads-up email/push, and the availability window opens. |
+| **Availability & Leave** | Staff update their availability at any time; admins review leave in parallel — these run side by side, not one after the other. |
+| **Generate** | The engine solves the roster against the current doctor pool, Shift Schedule, and rules. |
+| **Roster Review** | The generated Duty Plan is ready to check — coverage, workload, and any soft violations — before it goes live. |
+| **Published** | The Duty Plan is live and visible to the team. |
+
+A cycle that can't produce a valid schedule lands in **Failed** instead of Roster Review; one you stop partway through lands in **Cancelled**. See [Running a planning cycle](/auto-duty-planning/running-a-planning-cycle) for what to do at each stage.
+
+## How much runs on its own
+
+You choose how hands-on each cycle is:
+
+| Setting | Behaviour |
+| --- | --- |
+| **Off** (default) | You start each cycle and click **Generate Duty Plan** and **Publish Roster** yourself. |
+| **Generate duty plan automatically** (Auto Mode) | The cycle generates on its own once the review window closes, even if some responses are still pending. You still review and publish. |
+| **Publish automatically** | Requires Auto Mode. The generated Duty Plan publishes with no review step at all. |
+
+See [Setting up an Auto Duty](/auto-duty-planning/setting-up-an-auto-duty) for how to configure these.
+
+<Warning>
+  The doctor pool is never a saved list — it's queried fresh at Notify and Generate time from your department, pod, and location filters. A doctor who's deactivated, transferred, or rotated out is automatically dropped from the next cycle; no manual list to maintain, but also nothing to manually pin down.
+</Warning>
+
+## Where to find it
+
+Select **Auto Duty Planning** in the sidebar to see every Auto Duty in your organisation, its cadence, its Shift Schedule, and its latest planning cycle.
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Set up an Auto Duty" icon="sliders" href="/auto-duty-planning/setting-up-an-auto-duty">
+    Configure cadence, team scope, and automation level.
+  </Card>
+
+  <Card title="Run a planning cycle" icon="route" href="/auto-duty-planning/running-a-planning-cycle">
+    Walk a cycle from Notify through to a published Duty Plan.
+  </Card>
+</CardGroup>

@@ -1,0 +1,53 @@
+---
+title: "Duty Calendar: everyone's duties in one view"
+description: "See every doctor's published duties for the month in a single calendar, filter by department, pod, and location, and drill into a day when shifts overlap."
+icon: "calendar-days"
+---
+
+The **Duty Calendar** shows what's actually been published — across every roster, department, and location — in one month view. It's the duty-side counterpart to the [Leave Calendar](/leave/calendar).
+
+<Note>
+  Only **published** rosters appear here. Draft and failed rosters aren't shown.
+</Note>
+
+## Open the calendar
+
+Select **Duty Calendar** in the sidebar.
+
+- **Doctors** see only their own duties, with **Department** and **Location** filters.
+- **Admins** see the whole organisation by default, with an additional **Doctor** filter and a view toggle.
+
+## Calendar view vs. Shift × Day Grid
+
+Admins can switch between two layouts using the toggle in the top right:
+
+| View | Best for |
+| --- | --- |
+| **Month Calendar** | A traditional month grid — one cell per day, entries stacked by doctor. Used automatically once you filter to a single department or a single doctor. |
+| **Shift × Day Grid** | A coverage-focused grid grouped by shift and day. Appears automatically once you clear both the department and doctor filters — that is, once you're looking at the whole organisation. |
+
+You can also switch manually at any time; PlanMyRounds just picks a sensible default for you based on your filters.
+
+## Filters
+
+| Filter | What it does |
+| --- | --- |
+| **All Depts** | Narrow to one department. |
+| **All Locations** | Narrow to one site. |
+| **Doctor** (admins only) | Focus on a single doctor's duties across every roster they're on. |
+
+## Drilling into a day
+
+Select any day to open its agenda — a proportional timeline of every doctor's duties that day. If two or more duties overlap in time, they're flagged with an **Overlaps N other entries at this time** note, so you can spot a scheduling clash at a glance without cross-checking rosters manually.
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Check coverage and workload" icon="gauge" href="/rosters/duty-dashboard">
+    See the numbers behind what the calendar shows.
+  </Card>
+
+  <Card title="View the Leave Calendar" icon="calendar-days" href="/leave/calendar">
+    The same idea, for time off instead of duties.
+  </Card>
+</CardGroup>

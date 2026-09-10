@@ -1,0 +1,57 @@
+---
+title: "Retrying a failed roster with relaxed constraints"
+description: "When roster generation fails, loosen a couple of the most common blockers and add doctors from the roster's own page, then regenerate without starting over."
+icon: "rotate"
+---
+
+When a roster shows a **Failed** status, you don't need to reopen the wizard and rebuild it. The failed roster's own page offers a faster path: relax the constraints most likely to be the problem, optionally add doctors, and regenerate in place.
+
+<Note>
+  This works from any **Failed** roster page — it isn't specific to Auto Duty. For Auto Duty cycles, the same idea appears as **Retry Generation** on a failed [planning cycle](/auto-duty-planning/running-a-planning-cycle#if-generation-fails).
+</Note>
+
+## Open the retry panel
+
+On a **Failed** roster, you'll see a **Retry with relaxed constraints** panel: some staffing constraints may be too restrictive to generate a roster. From here you can either:
+
+- Select **Retry generation** to open the relaxed-constraints modal (below), or
+- Select **Create new plan** to abandon this roster and start fresh in the wizard instead.
+
+## Adjust and retry
+
+The **Retry with relaxed constraints** modal lets you adjust a few constraints to give the scheduler more flexibility — your existing roster inputs stay unchanged unless you update them here.
+
+<Steps>
+  <Step title="Raise max consecutive working days (optional)">
+    The field starts one day above the roster's original setting. A `+N` badge shows how much more room you're giving the engine versus the original roster.
+  </Step>
+  <Step title="Lower min rest days per week (optional)">
+    Starts at the roster's original value — reduce it if that's the likely blocker.
+  </Step>
+  <Step title="Add doctors (optional)">
+    Expand **Doctors in this roster** to see everyone currently included, or select **Add doctors** to bring in more without leaving the modal.
+  </Step>
+  <Step title="Retry">
+    Select **Retry roster creation**. The roster regenerates against the same period with your adjusted inputs.
+  </Step>
+</Steps>
+
+<Tip>
+  Start small. A one-day increase to max consecutive work days is often enough to clear a near-miss — you can always retry again with a larger adjustment if it still fails.
+</Tip>
+
+## What happens next
+
+The roster moves back into **Creating** while the engine re-solves, then lands on **Draft** (ready to [review and publish](/rosters/publishing-a-roster)) or **Failed** again if the same or a different constraint still can't be satisfied. See [Roster constraints](/rosters/roster-constraints) for the full list of hard and soft rules the engine applies.
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Understand the rules" icon="shield-halved" href="/rosters/roster-constraints">
+    See every rule the engine respects, and what "hard" versus "soft" means.
+  </Card>
+
+  <Card title="Roster and shift statuses" icon="signal" href="/rosters/statuses">
+    Reference for every status you'll see on a roster.
+  </Card>
+</CardGroup>

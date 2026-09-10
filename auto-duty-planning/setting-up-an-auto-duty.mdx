@@ -1,0 +1,93 @@
+---
+title: "Setting up an Auto Duty"
+description: "Walk through the four-step wizard to configure a recurring Auto Duty — cadence, the Shift Schedule it uses, the team it draws from, and its scheduling rules."
+icon: "sliders"
+---
+
+Setting up an Auto Duty is a guided, four-step process, similar to the manual roster wizard but focused on what should repeat every cycle.
+
+<Note>
+  Only admins can create or edit an Auto Duty.
+</Note>
+
+## Before you begin
+
+- A [Shift Schedule](/shifts/shift-schedules) exists for the team this Auto Duty will plan for.
+- Doctors who should be in the pool have their **department**, **pod**, and (if you use them) **location** set correctly on their [profiles](/team/doctor-profiles) — this is how the doctor pool is scoped.
+
+## Open the wizard
+
+Go to **Auto Duty Planning** in the sidebar and select **Set Auto Duty**. The wizard has four tabs: **Basics**, **Shifts**, **Department & Pod**, and **Rules**.
+
+## Basics
+
+<Steps>
+  <Step title="Name it">
+    Enter a **Duty plan name** your team will recognise — for example, _MICU Weekly Planning_.
+  </Step>
+  <Step title="Set a location (optional)">
+    Choose a **Location**, or leave it as **No location** if this Auto Duty isn't tied to a specific site.
+  </Step>
+  <Step title="Choose the cadence">
+    Toggle **Schedule Cadence** to **Weekly** or **Monthly**, then set **Starts on** — a day of the week for weekly, or a day of the month for monthly.
+  </Step>
+  <Step title="Set when planning opens">
+    Under **Planning & Automation**, set **Planning opens** — how many days before each period staff can start updating their availability and leave.
+  </Step>
+</Steps>
+
+### Automation toggles
+
+Still under **Planning & Automation**:
+
+| Toggle | What it does |
+| --- | --- |
+| **Generate duty plan automatically** | When on, sets **Generate duty plan** — how many days before the period starts the review window closes and the engine generates automatically, even if some responses are still pending. New Auto Duties start with this on; you can turn it off once you're editing. |
+| **Publish automatically** | Publishes the generated Duty Plan with no admin review. Only available when automatic generation is on. |
+
+<Tip>
+  Leave both off if you'd rather review the roster before it goes anywhere — the cycle will still notify staff and collect availability for you, and wait for you to click **Generate Duty Plan** and **Publish Roster** yourself. See [Running a planning cycle](/auto-duty-planning/running-a-planning-cycle).
+</Tip>
+
+## Shifts
+
+Select the **Shift Schedule** this Auto Duty generates against every cycle. If none exist yet for your organisation, create one under [Shift Schedules](/shifts/shift-schedules) first, then come back to the wizard.
+
+## Department & Pod
+
+This step sets the doctor pool the engine draws from — re-queried fresh every cycle, so it never goes stale.
+
+- Check one or more **Departments** — leave none checked to include the whole organisation.
+- Check one or more **Pods** — leave none checked to include every pod.
+
+A live count shows how many active doctors currently match your scope, alongside a summary badge (for example, _2 dept · All pods · Main Hospital_) combining department, pod, and the location you set on Basics.
+
+## Rules
+
+Set the same work, rest, and fairness rules used by the manual roster wizard — max consecutive work days, minimum rest days, senior-to-junior ratios, and more. See [Roster constraints](/rosters/roster-constraints) for what each one does.
+
+## Save
+
+Select **Save Auto Duty**. It's active immediately and its next cycle will start on schedule.
+
+## Turning automation off mid-cycle
+
+If you switch off **Active** or **Generate duty plan automatically** while a cycle is already in progress, PlanMyRounds asks you to confirm:
+
+<Warning>
+  **Turn off automation?** A planning cycle is currently in progress for this Auto Duty. It will run to completion as normal; nothing in progress will be cancelled. This only stops future cycles from starting or auto-generating automatically.
+</Warning>
+
+Select **Turn Off** to confirm, or **Cancel** to leave automation as it is.
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Run a planning cycle" icon="route" href="/auto-duty-planning/running-a-planning-cycle">
+    See what happens at each stage, and how to start a cycle manually.
+  </Card>
+
+  <Card title="Build a Shift Schedule" icon="layer-group" href="/shifts/shift-schedules">
+    Set up the weekly pattern your Auto Duty will generate against.
+  </Card>
+</CardGroup>
