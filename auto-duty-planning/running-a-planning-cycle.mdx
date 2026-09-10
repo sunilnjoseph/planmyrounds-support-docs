@@ -1,0 +1,68 @@
+---
+title: "Running a planning cycle"
+description: "Follow a Planning Cycle through Notify, Availability & Leave, Generate, and Roster Review to a published Duty Plan — and see what to do if generation fails."
+icon: "route"
+---
+
+Once an [Auto Duty is set up](/auto-duty-planning/setting-up-an-auto-duty), it plans one **Planning Cycle** per period. Open the Auto Duty's detail page to see its next scheduled cycle, or select an in-progress one to follow its stages.
+
+## Starting a cycle
+
+Cycles normally start on their own, on the cadence you set. If you need one sooner, open the Auto Duty and select **Start Manual Cycle**, then pick the period from the list. A period that leaves less than the configured planning window is flagged, and a period that already has a cycle in progress is disabled.
+
+## The 5 stages
+
+<Steps>
+  <Step title="Notify">
+    Select **Notify Team & Open Collection**. This sends every doctor in the pool a heads-up and opens the availability window — there's nothing to review yet.
+  </Step>
+  <Step title="Availability & Leave">
+    Staff update their availability at any time, and admins can approve or reject leave in parallel — these aren't sequential steps. The panel shows two live counts:
+
+    - **Staff availability** — how many doctors have responded, and how many are still pending.
+    - **Leave requests** — how many are waiting on admin approval, with a shortcut to **Review Requests**.
+
+    If anyone hasn't responded, select **Send Reminder** to nudge them. This is a one-off, admin-triggered send, not an automatic recurring reminder.
+
+    When you're ready, select **Generate Duty Plan** — you don't need every response in first.
+  </Step>
+  <Step title="Generate">
+    The engine solves the roster against the current doctor pool, the Auto Duty's Shift Schedule, and its rules. This runs in the background and usually finishes within a minute.
+  </Step>
+  <Step title="Roster Review">
+    Check the generated Duty Plan — team size, coverage, and any soft violations — then select **Publish Roster** when you're happy with it.
+  </Step>
+  <Step title="Published">
+    The Duty Plan is live and visible to the team, the same as any published roster. See [Publishing a roster](/rosters/publishing-a-roster) for what staff see next.
+  </Step>
+</Steps>
+
+<Tip>
+  If **Generate duty plan automatically** is on for this Auto Duty, the cycle jumps from Availability & Leave straight to Generate on its own once the review window closes — you don't need to click **Generate Duty Plan** yourself. If **Publish automatically** is also on, Roster Review is skipped too and the cycle goes straight to Published.
+</Tip>
+
+## If generation fails
+
+A cycle that can't produce a valid schedule lands in **Failed**, with the reason shown alongside:
+
+- A **structural configuration problem** — for example, a duplicate shift name or unresolved staffing role — is flagged with a warning that retrying won't help until the Auto Duty's Shift Schedule or rules are fixed.
+- A **roster capacity** summary shows the doctor count, role breakdown, and how many slots the period needs, so you can see at a glance whether the pool is simply too small.
+- **Suggested next steps** lists what to try.
+
+Select **Retry Generation** once you've made a fix — the cycle re-solves against the same period without you having to start a new one.
+
+## Cancelling a cycle
+
+At any point before Published, select **Cancel Planning Cycle** to stop it. A cancelled cycle doesn't send further notifications and won't generate or publish — start a new manual cycle for the same period if you need to.
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="How Auto Duty Planning works" icon="circle-info" href="/auto-duty-planning/overview">
+    A refresher on Auto Duty, Planning Cycle, and Duty Plan.
+  </Card>
+
+  <Card title="Roster and shift statuses" icon="signal" href="/rosters/statuses">
+    Where planning cycle stages fit alongside roster statuses.
+  </Card>
+</CardGroup>

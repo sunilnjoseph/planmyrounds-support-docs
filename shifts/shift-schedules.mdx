@@ -1,0 +1,84 @@
+---
+title: "Shift Schedules: weekly shift patterns"
+description: "Combine your Shift Requirements into a reusable weekly pattern — the same shifts every day, or a different lineup for each weekday — and reuse it across rosters and Auto Duty."
+icon: "layer-group"
+---
+
+A **Shift Schedule** is a named, reusable weekly pattern built from your [Shift Requirements](/shifts/overview). Instead of picking individual shifts every time you build a roster, save the combination once and select it wherever you need it.
+
+<Note>
+  A Shift Schedule doesn't duplicate a shift's own times or staffing — it just references your existing Shift Requirements. If you edit a Shift Requirement later, every Shift Schedule that uses it picks up the change automatically.
+</Note>
+
+## Shift Requirements vs. Shift Schedules
+
+<CardGroup cols={2}>
+  <Card title="Shift Requirements" icon="clock" href="/shifts/overview">
+    A single shift definition — name, start/end time, staffing, and recovery rules. The building block.
+  </Card>
+
+  <Card title="Shift Schedules" icon="layer-group">
+    A weekly pattern of Shift Requirements — the same set every day, or a different lineup per weekday. What you pick when building a roster or Auto Duty.
+  </Card>
+</CardGroup>
+
+## Open Shift Schedules
+
+Select **Shift Schedules** in the sidebar to see every saved schedule for your organisation.
+
+## Create a Shift Schedule
+
+<Steps>
+  <Step title="Start a new schedule">
+    Select **Create New** (or open an existing one and **Edit**).
+  </Step>
+  <Step title="Fill in the basics">
+    Enter a **Name** (for example, _MICU Day + Night_) and an optional **Description**. Choose a **Location** (required) and, optionally, a **Department**.
+  </Step>
+  <Step title="Choose the pattern shape">
+    Under **Schedule Pattern**, choose whether these shifts repeat every day or vary by weekday:
+
+    - **All Days** — one list of shifts that applies to every day of the week.
+    - **Weekdays** — a separate list of shifts for each day, so weekends or specific weekdays can differ from the rest.
+  </Step>
+  <Step title="Add shifts">
+    Select **Add Shift** on the **All Days** card, or on each individual day card if you chose **Weekdays**. Pick from your existing Shift Requirements.
+  </Step>
+  <Step title="Copy a day's shifts (optional)">
+    On the **Weekdays** layout, once a day has shifts, use **Copy to All Days** or **Copy to Weekdays** to apply the same lineup elsewhere instead of re-adding shifts one by one.
+  </Step>
+  <Step title="Save">
+    Save the schedule. It's immediately available in the roster wizard and the Auto Duty wizard's Shifts step.
+  </Step>
+</Steps>
+
+## Active vs. inactive
+
+Every Shift Schedule is **Active** by default. Deactivating one stops it from being offered for **new** rosters and new Auto Duty setups — it doesn't touch anything already built with it.
+
+To deactivate, open the schedule and toggle it off. You'll be asked to confirm:
+
+<Warning>
+  Deactivating a Shift Schedule means it will no longer be selectable when creating a roster.
+</Warning>
+
+<Note>
+  An inactive Shift Schedule still appears in the Shift Schedules list for editing or reactivating — it's only hidden from the picker inside the roster and Auto Duty wizards.
+</Note>
+
+## Where it's used
+
+- The **roster creation wizard's** Shift configuration step can select a saved Shift Schedule instead of building the pattern from scratch each time.
+- The [Auto Duty wizard's](/auto-duty-planning/setting-up-an-auto-duty) Shifts step requires picking one — it's what every planning cycle generates against.
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Create a Shift Requirement" icon="plus" href="/shifts/creating-shifts">
+    Add the individual shifts a schedule can draw from.
+  </Card>
+
+  <Card title="Set up an Auto Duty" icon="robot" href="/auto-duty-planning/setting-up-an-auto-duty">
+    Put a Shift Schedule to work in a recurring duty plan.
+  </Card>
+</CardGroup>
